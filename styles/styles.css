@@ -6,6 +6,10 @@ nav {
   background-color: #e67974;
 }
 
+.button-collapse {
+  padding-left: 10px;
+}
+
 nav i.fa {
   height: 48px !important;
   line-height: 48px !important;
@@ -127,8 +131,56 @@ nav i.fa {
   padding-right: 0%;
 }
 
-.button-collapse {
-  padding-left: 10px;
+h1.header {
+  font-weight: 800;
+}
+
+.ava-2 {
+  height: 50vh;
+  background-image: url('../images/ava.img1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  margin-bottom: 0px;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.circle-container {
+  /*margin: auto;*/
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.circle {
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.circle-border {
+  margin: auto;
+  padding: 18px;
+  flex-grow: 1;
+  height: 200px;
+  width: 200px;
+  border: 5px solid;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 footer.page-footer {
