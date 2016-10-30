@@ -2,8 +2,12 @@ html {
   font-family: 'Work Sans', sans-serif;
 }
 
-nav {
-  background-color: #e67974;
+.primary-color {
+  background-color: rgb(230, 121, 116);
+}
+
+.secondary-color {
+  background-color: rgb(247, 212, 210);
 }
 
 .button-collapse {
@@ -135,6 +139,53 @@ h1.header {
   font-weight: 800;
 }
 
+.flex-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.flex-item {
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.circle-border {
+  margin: auto;
+  padding: 18px;
+  flex-grow: 1;
+  height: 200px;
+  width: 200px;
+  border: 5px solid rgb(171, 171, 171);
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.circle-red {
+  margin: auto;
+  padding: 18px;
+  flex-grow: 1;
+  height: 200px;
+  width: 200px;
+  background-color: rgb(208, 94, 88);
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.timeline-label {
+  margin: auto;
+}
+
+footer.page-footer {
+  padding-top: 0px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .ava-2 {
   height: 50vh;
   background-image: url('../images/ava.img1.jpg');
@@ -156,35 +207,7 @@ h1.header {
   padding-right: 0%;
 }
 
-.circle-container {
-  /*margin: auto;*/
-  display: flex;
-  width: 80%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.circle {
-  margin: auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.circle-border {
-  margin: auto;
-  padding: 18px;
-  flex-grow: 1;
-  height: 200px;
-  width: 200px;
-  border: 5px solid;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-footer.page-footer {
-  padding-top: 0px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+.ava-4 .content {
+  font-size: 18px;
+  line-height: 30px;
 }

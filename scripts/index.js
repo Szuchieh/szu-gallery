@@ -25,30 +25,38 @@ $(document).ready(function(){
   }
 
   function render(url) {
+    var scrollToTop = function() {
+      window.scrollTo(0, 0);
+    };
     switch (url) {
       case '#ProductDesign':
         fadeOutCurrentURL(currentURL);
         $('.ProductDesign').delay(300).fadeIn(300);
+        setTimeout(scrollToTop, 300);
         currentURL = url;
         break;
       case '#GraphicDesign':
         fadeOutCurrentURL(currentURL);
         $('.GraphicDesign').delay(300).fadeIn(300);
+        setTimeout(scrollToTop, 300);
         currentURL = url;
         break;
       case '#About':
         fadeOutCurrentURL(currentURL);
         $('.About').delay(300).fadeIn(300);
+        setTimeout(scrollToTop, 300);
         currentURL = url;
         break;
       case '#Ava':
         fadeOutCurrentURL(currentURL);
         $('.Ava').delay(300).fadeIn(300);
+        setTimeout(scrollToTop, 300);
         currentURL = url;
         break;
       case '#Chime':
         fadeOutCurrentURL(currentURL);
         $('.Chime').delay(300).fadeIn(300);
+        setTimeout(scrollToTop, 300);
         currentURL = url;
         break;
     }
@@ -64,8 +72,8 @@ $(document).ready(function(){
 // Nav Auto Hiding/Showing
 var didScroll;
 var lastScrollTop = 0;
-var delta = 3;
-var navbarHeight = $('.Navigation').outerHeight();
+var delta = 25;
+var navbarHeight = 64;
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -82,6 +90,11 @@ function hasScrolled() {
   var st = $(this).scrollTop();
   if (Math.abs(lastScrollTop - st) <= delta) {
     return;
+  } else if (st + $(window).height() >= $(document).height() - navbarHeight){
+    $('.Navigation').animate({
+      'margin-top': "0",
+    }, 200, function() {
+    });
   } else if (st > lastScrollTop && st > navbarHeight){
     $('.Navigation').animate({
       'margin-top': "-64",
