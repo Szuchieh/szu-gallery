@@ -1,40 +1,61 @@
 $(document).ready(function(){
-  $(window).trigger('hashchange'); // Need it?
-
   $('.button-collapse').sideNav({closeOnClick: true});
-
   $(window).on('hashchange', function(){
     render(decodeURI(window.location.hash));
   });
+  var currentURL = '#ProductDesign';
+  function fadeOutCurrentURL(hash) {
+    switch (hash) {
+      case '#ProductDesign':
+        $('.ProductDesign').fadeOut(300);
+        break;
+      case '#GraphicDesign':
+        $('.GraphicDesign').fadeOut(300);
+        break;
+      case '#About':
+        $('.About').fadeOut(300);
+        break;
+      case '#Ava':
+        $('.Ava').fadeOut(300);
+        break;
+      case '#Chime':
+        $('.Chime').fadeOut(300);
+        break;
+    }
+  }
 
   function render(url) {
     switch (url) {
-      case '#Home':
-        $('.Ava').hide();
-        $('.Chime').hide();
-        $('.About').hide();
-        $('.Homepage').show();
+      case '#ProductDesign':
+        fadeOutCurrentURL(currentURL);
+        $('.ProductDesign').delay(300).fadeIn(300);
+        currentURL = url;
+        break;
+      case '#GraphicDesign':
+        fadeOutCurrentURL(currentURL);
+        $('.GraphicDesign').delay(300).fadeIn(300);
+        currentURL = url;
         break;
       case '#About':
-        $('.Ava').hide();
-        $('.Chime').hide();
-        $('.About').show();
-        $('.Homepage').hide();
+        fadeOutCurrentURL(currentURL);
+        $('.About').delay(300).fadeIn(300);
+        currentURL = url;
         break;
       case '#Ava':
-        $('.Ava').show();
-        $('.Chime').hide();
-        $('.About').hide();
-        $('.Homepage').hide();
+        fadeOutCurrentURL(currentURL);
+        $('.Ava').delay(300).fadeIn(300);
+        currentURL = url;
         break;
       case '#Chime':
-        $('.Ava').hide();
-        $('.Chime').show();
-        $('.About').hide();
-        $('.Homepage').hide();
+        fadeOutCurrentURL(currentURL);
+        $('.Chime').delay(300).fadeIn(300);
+        currentURL = url;
         break;
-      default:
-
     }
   }
+
+  $('.GraphicDesign').hide();
+  $('.About').hide();
+  $('.Ava').hide();
+  $('.Chime').hide();
 });
