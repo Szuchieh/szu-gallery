@@ -58,4 +58,5 @@ $(document).ready(function(){
   $('.About').hide();
   $('.Ava').hide();
   $('.Chime').hide();
+  window.location.hash = currentURL;
 });
