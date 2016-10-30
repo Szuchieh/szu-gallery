@@ -60,3 +60,38 @@ $(document).ready(function(){
   $('.Chime').hide();
   window.location.hash = currentURL;
 });
+
+// Nav Auto Hiding/Showing
+var didScroll;
+var lastScrollTop = 0;
+var delta = 3;
+var navbarHeight = $('.Navigation').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+  var st = $(this).scrollTop();
+  if (Math.abs(lastScrollTop - st) <= delta) {
+    return;
+  } else if (st > lastScrollTop && st > navbarHeight){
+    $('.Navigation').animate({
+      'margin-top': "-64",
+    }, 200, function() {
+    });
+  } else if (st + $(window).height() < $(document).height()) {
+    $('.Navigation').animate({
+      'margin-top': "0",
+    }, 200, function() {
+    });
+  }
+  lastScrollTop = st;
+}
