@@ -11,7 +11,7 @@ nav i.fa {
   line-height: 48px !important;
 }
 
-#homepage-top {
+.homepage-top {
   background-image: url('../images/home.header.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -32,14 +32,26 @@ nav i.fa {
   padding-right: 0%;
 }
 
-#homepage-top h2 {
+.homepage-top h2 {
   color: #e67974;
   font-size: 60px;
   font-style: normal;
   font-weight: 800;
   line-height: 87px;
-  margin-bottom: 40px;
-  margin-top: 52px;
+  /*margin-bottom: 40px;*/
+  /*margin-top: 52px;*/
+  text-align: center;
+  text-transform: none;
+}
+
+.homepage-top h4 {
+  color: #e67974;
+  /*font-size: 60px;*/
+  font-style: normal;
+  font-weight: 800;
+  line-height: 55px;
+  /*margin-bottom: 40px;*/
+  /*margin-top: 52px;*/
   text-align: center;
   text-transform: none;
 }
@@ -48,7 +60,7 @@ nav i.fa {
   background-color:rgba(255, 255, 255, 0.8);
 }
 
-.card-content {
+.home-card-large {
   padding: 100px !important;
 }
 
