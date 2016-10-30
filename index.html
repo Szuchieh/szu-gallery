@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Szu Chen</title>
 
-    <!-- Fonts -->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Szu Chen</title>
 
-    <!-- CSS -->
-    <link href="styles/materialize.min.css" media="screen,projection" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles/font-awesome.min.css">
-    <link href="styles/styles.css" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Scripts -->
-    <script src="scripts/jquery-3.1.1.min.js"></script>
-    <script src="scripts/materialize.min.js"></script>
+  <!-- CSS -->
+  <link href="styles/reset.css" rel="stylesheet">
+  <link href="styles/materialize.min.css" media="screen,projection" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/font-awesome.min.css">
+  <link href="styles/styles.css" rel="stylesheet">
 
-  </head>
-  <body>
+</head>
+
+<body>
+  <div class="Navigation navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
+      <div class="navigation nav-wrapper">
         <a href="#" class="brand-logo center">Hello, I am Szu Chen</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="#!">Product Design</a></li>
-          <li><a href="#!">Graphics</a></li>
-          <!-- <li><a href="#!">About Me</a></li> -->
-        </ul>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#!"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-          <li><a href="#!"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        </ul>
+        <a href="#!" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down">
+            <li><a href="#!">Product Design</a></li>
+            <li><a href="#!">Graphics</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="https://www.linkedin.com/in/szuchen" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/szu.art/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+          <div class="side-nav" id="mobile-menu">
+            <ul>
+              <li><a href="#!">Product Design</a></li>
+              <li><a href="#!">Graphics</a></li>
+            </ul>
+            <a href="https://www.linkedin.com/in/szuchen" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/szu.art/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
       </div>
     </nav>
-    <div class="container">
+  </div>
 
+  <div class="homepage">
+    <div class="valign-wrapper" id="homepage-top">
+      <div class="row">
+        <div class="col m8 offset-m2">
+          <h2 class="valign center">I am a product designer with extensive visual skills and a love of understanding users</h2>
+        </div>
+      </div>
     </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header center">Work Samples</h2>
+      </div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Ava</h2>
+        <p class="grey-text text-darken-3 lighten-3">End to End Project - Fitness App</p>
+      </div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Chime</h2>
+        <p class="grey-text text-darken-3 lighten-3">Android App Redesign - Mobile Bank</p>
+      </div>
+    </div>
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Aiooki</h2>
+        <p class="grey-text text-darken-3 lighten-3">Details Coming Soon!</p>
+      </div>
+    </div>
+  </div>
 
-  </body>
+  <div class="footer">
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container center">
+          © 2016 Szu Chen | All Rights Reserved
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/jquery-2.2.4.min.js"></script>
+  <script src="scripts/materialize.min.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+
 </html>
