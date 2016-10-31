@@ -77,6 +77,8 @@ $(document).ready(function(){
       case '#ProductDesign':
         fadeOutCurrentURL(currentURL);
         $('nav').addClass('home-nav-bar');
+        $('nav').removeClass('ava-nav-bar');
+        $('nav').removeClass('chime-nav-bar');
         $('.ProductDesign').delay(300).fadeIn(300);
         setTimeout(scrollToTop, 300);
         currentURL = url;
