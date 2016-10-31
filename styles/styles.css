@@ -176,9 +176,96 @@ h1.header {
   border-radius: 50%;
 }
 
-.timeline-label {
-  margin: auto;
+
+
+.timeline-container-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
 }
+
+.timeline {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-item {
+  transition: all 200ms ease-in;
+}
+
+.timeline-item .stage p {
+  color: #FFFFFF;
+}
+
+.stage {
+  margin-top: 20px;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #FFFFFF;
+  position: relative;
+  transition: all 200ms ease-in;
+}
+
+.stage:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  top: -13.5px;
+  transition: all 200ms ease-in;
+}
+
+.timeline-item.complete .stage {
+  border-top: 2px solid #464646;
+}
+
+.timeline-item.complete .stage:before {
+  background-color: #464646;
+  border: none;
+  transition: all 200ms ease-in;
+}
+
+.timeline-item.complete .stage p {
+  color: #464646;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 700px) {
+  .timeline {
+    list-style-type: none;
+    display: block;
+  }
+
+  .timeline-item {
+    transition: all 200ms ease-in;
+    display: flex;
+    width: inherit;
+  }
+
+  .stage:before {
+    left: -8%;
+    top: 30%;
+    transition: all 200ms ease-in;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 footer.page-footer {
   padding-top: 0px;
@@ -210,4 +297,25 @@ footer.page-footer {
 .ava-4 .content {
   font-size: 18px;
   line-height: 30px;
+}
+
+.ava-9 {
+  height: 50vh;
+  background-image: url('../images/ava.img5.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  margin-bottom: 0px;
+  padding-left: 0%;
+  padding-right: 0%;
 }
