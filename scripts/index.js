@@ -54,12 +54,12 @@ $(document).ready(function(){
       case '#ProductDesign':
         $('.ProductDesign').fadeOut(300);
         break;
-      case '#GraphicDesign':
-        $('.GraphicDesign').fadeOut(300);
-        break;
-      case '#About':
-        $('.About').fadeOut(300);
-        break;
+      // case '#GraphicDesign':
+      //   $('.GraphicDesign').fadeOut(300);
+      //   break;
+      // case '#About':
+      //   $('.About').fadeOut(300);
+      //   break;
       case '#Ava':
         $('.Ava').fadeOut(300);
         break;
@@ -76,30 +76,35 @@ $(document).ready(function(){
     switch (url) {
       case '#ProductDesign':
         fadeOutCurrentURL(currentURL);
+        $('nav').addClass('home-nav-bar');
         $('.ProductDesign').delay(300).fadeIn(300);
         setTimeout(scrollToTop, 300);
         currentURL = url;
         break;
-      case '#GraphicDesign':
-        fadeOutCurrentURL(currentURL);
-        $('.GraphicDesign').delay(300).fadeIn(300);
-        setTimeout(scrollToTop, 300);
-        currentURL = url;
-        break;
-      case '#About':
-        fadeOutCurrentURL(currentURL);
-        $('.About').delay(300).fadeIn(300);
-        setTimeout(scrollToTop, 300);
-        currentURL = url;
-        break;
+      // case '#GraphicDesign':
+      //   fadeOutCurrentURL(currentURL);
+      //   $('.GraphicDesign').delay(300).fadeIn(300);
+      //   setTimeout(scrollToTop, 300);
+      //   currentURL = url;
+      //   break;
+      // case '#About':
+      //   fadeOutCurrentURL(currentURL);
+      //   $('.About').delay(300).fadeIn(300);
+      //   setTimeout(scrollToTop, 300);
+      //   currentURL = url;
+      //   break;
       case '#Ava':
         fadeOutCurrentURL(currentURL);
+        $('nav').removeClass('home-nav-bar');
+        $('nav').addClass('ava-nav-bar');
         $('.Ava').delay(300).fadeIn(300);
         setTimeout(scrollToTop, 300);
         currentURL = url;
         break;
       case '#Chime':
         fadeOutCurrentURL(currentURL);
+        $('nav').removeClass('home-nav-bar');
+        $('nav').addClass('chime-nav-bar');
         $('.Chime').delay(300).fadeIn(300);
         setTimeout(scrollToTop, 300);
         currentURL = url;
@@ -107,12 +112,12 @@ $(document).ready(function(){
     }
   }
 
-  $('.ProductDesign').hide();
+  // $('.ProductDesign').hide();
   $('.GraphicDesign').hide();
   $('.About').hide();
   $('.Ava').hide();
-  // $('.Chime').hide();
-  // window.location.hash = currentURL;
+  $('.Chime').hide();
+  window.location.hash = currentURL;
 });
 
 // Nav Auto Hiding/Showing

@@ -28,11 +28,27 @@ h5 {
 }
 
 .ava-primary-color {
-  background-color: rgb(230, 121, 116);
+  background-color: #67685E;
 }
 
 .ava-secondary-color {
-  background-color: rgb(247, 212, 210);
+  background-color: #48493E;
+}
+
+.ava-third-color {
+  background-color: #DBDBDB;
+}
+
+.home-nav-bar {
+  background-color: rgb(230, 121, 116);
+}
+
+.ava-nav-bar {
+  background-color: #48493E;
+}
+
+.chime-nav-bar {
+  background-color: #33AF23;
 }
 
 .chime-primary-color {
@@ -297,7 +313,7 @@ h1.header {
 }
 
 .ava-5 .card h5 {
-  color: rgb(230, 121, 116);
+  color: #48493E;
 }
 
 .ava-5 .card ul {
@@ -307,7 +323,7 @@ h1.header {
 .ava-5 .card li:before {
   content: "• ";
   margin-left: -15px;
-  color: rgb(230, 121, 116);
+  color: #48493E;
   font-size: 20px;
 }
 
@@ -315,7 +331,7 @@ h1.header {
   background-image: url('../images/ava.img5.jpg');
 }
 
-.ava-10.primary-color {
+.ava-10.ava-primary-color {
   padding-bottom: 0px;
 }
 
