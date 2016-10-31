@@ -107,12 +107,12 @@ $(document).ready(function(){
     }
   }
 
-  // $('.ProductDesign').hide();
+  $('.ProductDesign').hide();
   $('.GraphicDesign').hide();
   $('.About').hide();
   $('.Ava').hide();
-  $('.Chime').hide();
-  window.location.hash = currentURL;
+  // $('.Chime').hide();
+  // window.location.hash = currentURL;
 });
 
 // Nav Auto Hiding/Showing
