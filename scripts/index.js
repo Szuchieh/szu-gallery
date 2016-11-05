@@ -125,7 +125,7 @@ $(document).ready(function(){
 // Nav Auto Hiding/Showing
 var didScroll;
 var lastScrollTop = 0;
-var delta = 25;
+var delta = 5;
 var navbarHeight = 64;
 
 $(window).scroll(function(event){
@@ -143,17 +143,20 @@ function hasScrolled() {
   var st = $(this).scrollTop();
   if (Math.abs(lastScrollTop - st) <= delta) {
     return;
-  } else if (st + $(window).height() >= $(document).height() - navbarHeight){
-    $('.Navigation').animate({
-      'margin-top': "0",
-    }, 200, function() {
-    });
-  } else if (st > lastScrollTop && st > navbarHeight){
+  }
+  // else if (st + $(window).height() >= $(document).height() - navbarHeight){
+  //   $('.Navigation').animate({
+  //     'margin-top': "0",
+  //   }, 200, function() {
+  //   });
+  // } 
+  else if (st > lastScrollTop && st > navbarHeight){
     $('.Navigation').animate({
       'margin-top': "-64",
     }, 200, function() {
     });
-  } else if (st + $(window).height() < $(document).height()) {
+  }
+  else if (st + $(window).height() < $(document).height()) {
     $('.Navigation').animate({
       'margin-top': "0",
     }, 200, function() {
