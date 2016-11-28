@@ -141,29 +141,29 @@ setInterval(function() {
         hasScrolled();
         didScroll = false;
     }
-}, 250);
+}, 400);
 
 function hasScrolled() {
   var st = $(this).scrollTop();
   if (Math.abs(lastScrollTop - st) <= delta) {
     return;
   }
-  // else if (st + $(window).height() >= $(document).height() - navbarHeight){
-  //   $('.Navigation').animate({
-  //     'margin-top': "0",
-  //   }, 200, function() {
-  //   });
-  // }
+  else if (st + $(window).height() >= $(document).height() - navbarHeight - 150){
+    $('.Navigation').animate({
+      'margin-top': "0",
+    }, 400, function() {
+    });
+  }
   else if (st > lastScrollTop && st > navbarHeight){
     $('.Navigation').animate({
       'margin-top': "-64",
-    }, 200, function() {
+    }, 400, function() {
     });
   }
   else if (st + $(window).height() < $(document).height()) {
     $('.Navigation').animate({
       'margin-top': "0",
-    }, 200, function() {
+    }, 400, function() {
     });
   }
   lastScrollTop = st;
