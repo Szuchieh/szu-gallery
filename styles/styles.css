@@ -402,3 +402,13 @@ h1.header {
 .chime-10-image {
   background-image: url('../images/chime.img8.jpg');
 }
+
+/*
+##################
+#     Footer     #
+##################
+*/
+footer.page-footer .footer-copyright {
+    overflow: visible;
+    line-height: 20px;
+}
