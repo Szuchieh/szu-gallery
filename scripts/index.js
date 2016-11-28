@@ -1,3 +1,7 @@
+$(window).load(function() {
+  $(".loading-page").fadeOut("slow");;
+});
+
 $(document).ready(function(){
 
   // var updateTimeline = function functionName(num) {
@@ -149,7 +153,7 @@ function hasScrolled() {
   //     'margin-top': "0",
   //   }, 200, function() {
   //   });
-  // } 
+  // }
   else if (st > lastScrollTop && st > navbarHeight){
     $('.Navigation').animate({
       'margin-top': "-64",
