@@ -230,6 +230,7 @@ h1.header {
 }
 
 .timeline-item {
+  flex-grow: 1;
   transition: all 200ms ease-in;
 }
 
@@ -247,7 +248,36 @@ h1.header {
   transition: all 200ms ease-in;
 }
 
-.stage:before {
+.stage-first::before {
+  content: "";
+  width: 50%;
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.stage-last::before {
+  content: "";
+  width: 50%;
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: -3px;
+}
+
+/*.stage-first::before {
+  position: absolute;
+  top:-1px;
+  left:1px;
+  width:50%;
+  height: 1px;
+  background-color:#fff;
+}*/
+
+.stage::after {
   content: '';
   width: 25px;
   height: 25px;
