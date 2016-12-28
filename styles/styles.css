@@ -352,6 +352,14 @@ h1.header {
 ###################
 */
 
+.persona h5{
+  margin: 0px;
+}
+
+.persona img{
+  /*border: .5px grey solid;*/
+}
+
 .ava-1 {
   margin-bottom: 20px;
 }
